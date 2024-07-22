@@ -132,8 +132,12 @@ public class UserService {
         return new ResponseEntity<>("file must be less then 1mb", HttpStatusCode.valueOf(400));
       }
 
-String demo = new ClassPathResource("static/image").getFile().getAbsolutePath();
-      String path=demo.replace("\\", "//").replace("target", "src").replace("classes", "main//resources");
+// String demo = new ClassPathResource("static/image").getFile().getAbsolutePath();
+// System.out.println("******************");
+// System.out.println(demo);
+// System.out.println("******************");     
+// String path=demo.replace("\\", "//").replace("target", "src").replace("classes", "main//resources");
+String path="E://SpringBoot_BlogApp//server//src//main//resources//static//image";
       String pathdel = path + "//" + getUser.getProfileimg();
       File imgfile = new File(pathdel);
       imgfile.delete();
